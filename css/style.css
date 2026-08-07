@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 20px;
+}
+
+.converter {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 32px;
+  background-color: #fff;
+  max-width: fit-content;
+  border-radius: 8px;
+
+  label {
+    span {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      color: #5d5d5d;
+    }
+
+    input {
+      padding: 8px 24px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  }
+}
