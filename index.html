@@ -9,14 +9,54 @@
   <body>
     <h1>Currency Converter</h1>
     <div class="converter">
-      <label>
-        <span>AMD</span>
-        <input type="text" id="amd" placeholder="AMD" />
-      </label>
-      <label>
-        <span>USD</span>
-        <input type="text" id="usd" placeholder="USD" />
-      </label>
+      <div class="flags__and__prices">
+        <div class="flags">
+          <div class="usa flag">
+            <img src="flags and svgs/usa-flag.png" alt="usa-flag" />
+            <span>USD</span>
+          </div>
+          <div class="euro flag">
+            <img src="flags and svgs/euro.png" alt="usa-flag" />
+            <span>EUR</span>
+          </div>
+          <div class="rus flag">
+            <img src="flags and svgs/russia-flag.png" alt="usa-flag" />
+            <span>RUB</span>
+          </div>
+        </div>
+
+        <div class="prices">
+          <div class="usd"></div>
+          <div class="eur"></div>
+          <div class="rub"></div>
+        </div>
+      </div>
+
+      <div class="changes">
+        <label>
+          <span>HAVE</span>
+          <select id="have">
+            <option value="AMD">AMD</option>
+            <option value="EUR">EUR</option>
+            <option value="RUB">RUB</option>
+            <option value="USD">USD</option>
+          </select>
+          <input type="text" id="amd" placeholder="0" />
+        </label>
+        <div class="swap">
+          <img src="flags and svgs/swap.png" alt="" />
+        </div>
+        <label>
+          <span>WANT TO</span>
+          <select id="want">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="RUB">RUB</option>
+            <option value="AMD">AMD</option>
+          </select>
+          <input type="text" id="usd" placeholder="0" />
+        </label>
+      </div>
     </div>
     <script defer src="js/script.js"></script>
   </body>

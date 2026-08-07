@@ -7,6 +7,7 @@ body {
 
 .converter {
   display: flex;
+  flex-direction: column;
   gap: 16px;
   margin-bottom: 16px;
   padding: 32px;
@@ -14,19 +15,106 @@ body {
   max-width: fit-content;
   border-radius: 8px;
 
-  label {
-    span {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 12px;
-      color: #5d5d5d;
+  .flags__and__prices {
+    display: flex;
+    justify-content: space-between;
+    .flags {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      padding-bottom: 24px;
+
+      .flag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 24px;
+          height: 24px;
+          margin-right: 24px;
+        }
+
+        span {
+          font-weight: 600;
+        }
+      }
     }
 
-    input {
-      padding: 8px 24px;
-      font-size: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+    .prices {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 27px;
+      padding-bottom: 24px;
+      font-weight: 600;
+    }
+  }
+
+  .changes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+
+    .swap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    label {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      span {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #5d5d5d;
+      }
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+        background-repeat: no-repeat;
+        background-position: right 16px center;
+        background-size: 16px; /* Սլաքի չափն է */
+        padding: 8px 40px 8px 16px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+        margin-bottom: 14px;
+      }
+      #have {
+        width: 100%;
+        padding: 8px 24px;
+        font-size: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+      #want {
+        width: 100%;
+        padding: 8px 24px;
+        font-size: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px 24px;
+        font-size: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+      }
     }
   }
 }
